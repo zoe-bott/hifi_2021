@@ -42,11 +42,48 @@
 								<li><a href="star_map.html">What am I looking at</a></li>
 							</ul>
 						</nav>
+						<button onclick="document.getElementById('id01').style.display='block'" class="reservations_phone ml-auto">LOGIN</button>
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</header>
+	<!-- login-->
+	<div id="id01" class="modal">
+  
+			<form class="modal-content animate" action="/action_page.php">
+			  <div class="imgcontainer">
+				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+				<h2 class="loginheader">Login</h2>
+			  </div>
+		  
+			  <div class="logincontainer">
+				<label for="uname"><b>Username</b></label>
+				<input type="text" placeholder="Enter Username" name="uname" required>
+		  
+				<label for="psw"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="psw" required>
+				  
+				<button type="submit" class="loginbtn">LOGIN</button>
+				<label>
+				  <input type="checkbox" checked="checked" name="remember" class="rememberchk"> Remember me
+				</label>
+			  </div>
+			</form>
+		  </div>
+		  
+		  <script>
+		  // Get the modal
+		  var modal = document.getElementById('id01');
+		  
+		  // When the user clicks anywhere outside of the modal, close it
+		  window.onclick = function(event) {
+			  if (event.target == modal) {
+				  modal.style.display = "none";
+			  }
+		  }
+		  </script>
 	
 	<!-- Home -->
 
@@ -66,6 +103,41 @@
 		</div>
 	</div>
 
+	<!-- Levels -->
+
+	<div class="levels">
+		<div class="container">
+			<div class="row level">
+				<h1 class="col-sm-5">Level 1: Just Your Eyes!</h1>
+				<button type="button" id="level1btn" 2class="col-sm-1" data-toggle="collapse" data-target="#level1" onclick="change('level1btn')" value="Close">→</button>
+			</div>  
+			<div id="level1" class="collapse">
+				<img src="images/level1.png" class="imgcontainer" width=100%>
+			</div>
+			  
+			<div class="row level">
+				<h1 class="col-sm-5">Level 2: Binoculars</h1>
+				<button type="button" id="level2btn" 2class="col-sm-1" data-toggle="collapse" data-target="#level2" onclick="change('level2btn')" value="Close">→</button>
+			</div> 
+			<div id="level2" class="collapse">
+				<img src="images/level2.png" class="imgcontainer" width=100%>
+			</div>
+
+			<div class="row level">
+				<h1 class="col-sm-5">Level 3: Telescopes</h1>
+				<button type="button" id="level3btn" 2class="col-sm-1" data-toggle="collapse" data-target="#level3" onclick="change('level3btn')" value="Close">→</button>
+			</div> 
+
+			<div id="level3" class="collapse">
+				<img src="images/level3.png" class="imgcontainer" width=100%>
+			</div>
+		</div>
+	</div>
+
+	<!--What's next-->
+
+	<div class="next_button section_title"><button class="button"><a href="where.html"><span>WHAT'S NEXT</span></a></button></div>
+
 
 	<!-- Footer -->
 
@@ -74,9 +146,9 @@
 				<div class="row">
 	
 					<!-- Footer Logo -->
-					<div class="col-lg-3 footer_col">
+					<div class="col-lg-4 footer_col">
 						<div class="footer_logo">
-							<div class="footer_logo_title">STARGAZING</div>
+							<div class="footer_logo_title">LET'S GET SPACY</div>
 							<div class="footer_logo_subtitle">flying splaucers</div>
 						</div>
 						<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -91,7 +163,7 @@
 						</div>
 					</div>
 					
-					<div class="col-lg-3 footer_col">
+					<div class="col-lg-2 footer_col">
 						<div class="footer_contact">
 								<p>Made by </p>
 								<ul>
@@ -101,7 +173,7 @@
 									</li>
 									<li class="d-flex flex-row align-items-start justify-content-start">
 										<div><div class="footer_contact_title">Sam Bensley </div></div>
-										<div class="footer_contact_text">z5555555</div>
+										<div class="footer_contact_text">z5163606</div>
 									</li>
 									<li class="d-flex flex-row align-items-start justify-content-start">
 										<div><div class="footer_contact_title">Hannah Chen</div></div>
@@ -124,6 +196,21 @@
 		</footer>
 </div>
 
+<script>
+		function change(buttonID)
+		{
+			var elem = document.getElementById(buttonID);
+			if (elem.value=="Close") {
+				elem.innerHTML = "↓";
+				elem.value = "Open";
+			}
+			else {
+				elem.innerHTML = " → ";
+				elem.value = "Close";
+			}
+		}
+</script>
+
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap-4.1.2/popper.js"></script>
 <script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
@@ -137,6 +224,6 @@
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="plugins/jquery-datepicker/jquery-ui.js"></script>
 <script src="plugins/jquery-timepicker/jquery.timepicker.js"></script>
-<script src="js/about.js"></script>
+<script src="js/what.js"></script>
 </body>
 </html>

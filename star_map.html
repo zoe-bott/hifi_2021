@@ -42,11 +42,49 @@
 									<li><a href="star_map.html">What am I looking for</a></li>
 								</ul>
 						</nav>
+						<button onclick="document.getElementById('id01').style.display='block'" class="reservations_phone ml-auto">LOGIN</button>
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</header>
+	<!-- login-->
+	
+	<div id="id01" class="modal">
+  
+			<form class="modal-content animate" action="/action_page.php">
+			  <div class="imgcontainer">
+				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+				<h2 class="loginheader">LOGIN</h2>
+			  </div>
+		  
+			  <div class="logincontainer">
+				<label for="uname"><b>Username</b></label>
+				<input type="text" placeholder="Enter Username" name="uname" required>
+		  
+				<label for="psw"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="psw" required>
+				  
+				<button type="submit" class="loginbtn">LOGIN</button>
+				<label>
+				  <input type="checkbox" checked="checked" name="remember" class="rememberchk"> Remember me
+				</label>
+			  </div>
+			</form>
+		  </div>
+		  
+		  <script>
+		  // Get the modal
+		  var modal = document.getElementById('id01');
+		  
+		  // When the user clicks anywhere outside of the modal, close it
+		  window.onclick = function(event) {
+			  if (event.target == modal) {
+				  modal.style.display = "none";
+			  }
+		  }
+		  </script>
 	
 	<!-- Home -->
 
@@ -67,6 +105,27 @@
 	</div>
 
 
+	<!-- Star map -->
+	<div class="star-map">
+		<div class="container">
+			<h1>YOUR MAP OF THE STARS</h1>
+			<div class="enter-location form-group row">
+				<label class="col-sm-2 col-form-label">Enter location: </label>
+				<div class="col-sm-4 input-group mb-3">
+						<input type="location" class="form-control" placeholder="Location">
+						<div class="input-group-append">
+								<button class="btn btn-outline-secondary" type="button">GO</button>
+						</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="imgcontainer"><img src="images/starmap_mock.png" width = 80%></div>
+	</div>
+
+	<div class="next_button section_title"><button class="button"><a href="index.html"><span>TAKE ME HOME</span></a></button></div>
+
+
 	<!-- Footer -->
 
 	<footer class="footer">
@@ -74,9 +133,9 @@
 				<div class="row">
 	
 					<!-- Footer Logo -->
-					<div class="col-lg-3 footer_col">
+					<div class="col-lg-4 footer_col">
 						<div class="footer_logo">
-							<div class="footer_logo_title">STARGAZING</div>
+							<div class="footer_logo_title">LET'S GET SPACY</div>
 							<div class="footer_logo_subtitle">flying splaucers</div>
 						</div>
 						<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -91,7 +150,7 @@
 						</div>
 					</div>
 					
-					<div class="col-lg-3 footer_col">
+					<div class="col-lg-2 footer_col">
 						<div class="footer_contact">
 								<p>Made by </p>
 								<ul>
@@ -101,7 +160,7 @@
 									</li>
 									<li class="d-flex flex-row align-items-start justify-content-start">
 										<div><div class="footer_contact_title">Sam Bensley </div></div>
-										<div class="footer_contact_text">z5555555</div>
+										<div class="footer_contact_text">z5163606</div>
 									</li>
 									<li class="d-flex flex-row align-items-start justify-content-start">
 										<div><div class="footer_contact_title">Hannah Chen</div></div>
