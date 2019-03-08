@@ -752,6 +752,12 @@ input[type=text], input[type=password] {
 	margin-bottom: 5px;
 }
 
+.star-map .pop-box
+{
+	left:39%;
+	top: 50%;
+}
+
 /*********************************
 8. Levels
 *********************************/
@@ -780,6 +786,17 @@ input[type=text], input[type=password] {
 .map
 {
 	margin-top: 100px;
+}
+
+.map img
+{
+	cursor: pointer;
+}
+
+.click
+{
+	font-weight: bold;
+	color: #000;
 }
 
 .map_box
@@ -885,6 +902,35 @@ input[type=text], input[type=password] {
 .map .map-button a
 {
 	font-size: 20px;
+}
+
+.pop-box
+{
+	position: absolute;
+	-webkit-transform: translateY(20%);
+	-moz-transform: translateY(20%);
+	-ms-transform: translateY(20%);
+	-o-transform: translateY(20%);
+	transform: translateY(20%);
+	border: none;
+	z-index: 1;
+	visibility: hidden;
+}
+
+.map .pop-box
+{
+	top: 25%;
+	left:49%;
+}
+
+.pop-box .show {
+	visibility: visible;
+}
+
+.box-img
+{
+	width: 200px;
+	
 }
 
 

@@ -110,8 +110,8 @@
 		<div class="container">
 			<h1>Find the best stargazing spot near you</h1>
 		</div>
-		<div class="imgcontainer">
-			<img src="images/map_mock.png" width=80%>
+		<div class="imgcontainer mapimg">
+			<img src="images/map_mock.png" onclick="showbox()" width=80%>
 		</div>
 		<div class="map_box">
 			<div class="checks">
@@ -140,6 +140,11 @@
 			</div>
 			<button class="map-button button"><a href="#"><span>GO</span></a></button>
 		</div>
+
+		<div class="pop-box">
+			<span id="pop-box"><img class="img-fluid box-img" src="images/popbox.png"></span>
+		</div>
+		<div class="container"><p class="click">Click map for more details.</p></div>
 	</div>
 
 	<!--What's next-->
@@ -206,6 +211,12 @@
 </div>
 
 <script>
+		// When the user clicks on div, open the popup
+	function showbox() {
+		var popup = document.getElementById("pop-box");
+		popup.classList.toggle("show");
+	}
+	
 	var slider = document.getElementById("howFar");
 	var output = document.getElementById("slider-output");
 	output.innerHTML = slider.value;

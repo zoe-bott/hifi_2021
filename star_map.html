@@ -120,7 +120,11 @@
 				
 			</div>
 		</div>
-		<div class="imgcontainer"><img src="images/starmap_mock.png" width = 80%></div>
+		<div class="imgcontainer"><img src="images/starmap_mock.png" onclick="showbox()" width = 80%></div>
+		<div class="pop-box">
+			<span id="pop-box"><img class="img-fluid box-img" src="images/star_pop.png"></span>
+		</div>
+		<div class="container"><p class="click">Click map for more details.</p></div>
 	</div>
 
 	<div class="next_button section_title"><button class="button"><a href="index.html"><span>TAKE ME HOME</span></a></button></div>
@@ -182,6 +186,13 @@
 			</div>
 		</footer>
 </div>
+
+<script>
+	function showbox() {
+		var popup = document.getElementById("pop-box");
+		popup.classList.toggle("show");
+	}
+</script>
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap-4.1.2/popper.js"></script>
